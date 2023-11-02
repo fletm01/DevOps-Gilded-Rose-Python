@@ -34,8 +34,9 @@ class GildedRose(object):
     def manage_concert_quality(self, item):
         if item.quality < 50:
             item.quality += 1
-            if item.name == concert:
-                if item.sell_in < 11 and item.quality <50:
+            if item.name == concert and item.quality <50:
+                if item.sell_in < 11:
                         item.quality += 1
-                if item.sell_in < 6 and item.quality <50:
+                if item.sell_in < 6: 
                         item.quality += 1
+
